@@ -151,7 +151,7 @@ const App: React.FC = () => {
         stepComponent = <StakeVerificationStep
             answers={userAnswers}
             updateUserAnswer={updateUserAnswer}
-            onVerificationComplete={(verifiedRank: string, verifiedWager?: number) => {
+            onVerificationComplete={(verifiedRank?: string, verifiedWager?: number) => {
                 if (verifiedRank) updateUserAnswer('rank', verifiedRank);
                 if (verifiedWager !== undefined) updateUserAnswer('totalWagered', verifiedWager);
                 handleNext();
